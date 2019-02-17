@@ -6,7 +6,7 @@ module GitBranchHookPlugin
     def self.included(base) # :nodoc:
       base.send(:include, InstanceMethods)
       base.class_eval do
-        alias_method :revisions_without_git_branch_hook, :git_branch_hook
+        alias_method :revisions_without_git_branch_hook, :revisions
         alias_method :revisions, :revisions_with_git_branch_hook
       end
     end
